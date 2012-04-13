@@ -1,0 +1,42 @@
+*my-notes.txt*	My own notes
+
+|my-notes|      My own notes
+|my-folds|	Notes about folding
+
+==============================================================================
+MY OWN NOTES							*my-notes*
+
+Place for my own notes - ~/.vim/doc/my-notes.txt
+refresh it using :helptags ~/.vim/doc/
+
+Folding in vim  ~
+								*my-folds*
+'foldmethod' 'fdm'	manual, indent, syntax, marker, expr, diff
+zo	open fold
+zO	open folds recursively
+zc	close fold
+zC	close folds recursively
+za	open/close fold
+za	open/close folds recursively
+zn	fold none: reset 'foldenable'.  all folds will be open.
+zN	fold normal: set 'foldenable'.  all folds as they were
+
+[z	to the start of cur. fold
+]z	to the end of cur. fold
+zj	next fold
+zk	prev fold
+
+zd	delete cur fold
+zD	delete cur fold recursively
+zE	eliminate all folds (manual||marker)
+
+zi	invert 'foldenable'
+zv	view cursor line
+zx	update folds (undo manual folds + apply 'foldlevel') + zv
+zX	update folds
+zm	foldmore ('foldlevel' --)
+zM	close all ('foldlevel' = 0)
+zR	open all ('foldlevel' = max)
+
+:{range}foldo!	open folds in range (with ! recursively)
+:{range}foldc!	close folds in range (with ! recursively)
