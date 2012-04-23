@@ -1,3 +1,6 @@
+
+call pathogen#infect()
+
 " map ,mz :write !mzscheme	" pro scheme - spise zbytecne
 "map <F2> a<C-R>=strftime("%c")<CR><Esc>		" na F2 vlozi aktualni datum/cas
 " previous tab
