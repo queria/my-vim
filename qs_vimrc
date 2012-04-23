@@ -158,7 +158,10 @@ au BufNewFile,BufRead *.as	set foldmethod=indent
 au BufNewFile,BufRead *.as	set foldlevel=2
 au BufNewFile,BufRead *.as	set foldnestmax=3
 
-au BufNewFile,BufRead *.mxml set filetype=mxml
+au BufNewFile,BufRead *.mxml set filetype=actionscript
+au BufNewFile,BufRead *.mxml set expandtab
+au BufNewFile,BufRead *.mxml set shiftwidth=2
+au BufNewFile,BufRead *.mxml set tabstop=2
 au BufNewFile,BufRead *.mxml let g:mxml_syntax_folding = 1
 
 "au BufNewFile,BufRead *.rb	set foldlevel=1
