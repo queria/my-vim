@@ -17,4 +17,5 @@ let g:colors_name = "queria_notr"
 highlight Folded ctermfg=DarkGray ctermbg=NONE
 hi clear Comment
 highlight Comment ctermfg=21 guifg=NONE
+highlight PMenuSel ctermfg=Black ctermbg=Yellow guibg=Yellow
 

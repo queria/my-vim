@@ -44,6 +44,7 @@ highlight IncSearch  ctermfg=Black ctermbg=Yellow cterm=none
 highlight CursorLine cterm=underline ctermbg=NONE ctermfg=NONE
 highlight Visual term=reverse cterm=reverse ctermbg=0
 highlight Ignore ctermfg=DarkGray
+highlight PMenuSel ctermfg=Black ctermbg=Yellow guibg=Yellow
 
 highlight Folded ctermbg=NONE
 " highlight FoldColumn     xxx term=standout ctermfg=14 ctermbg=82 guifg=Cyan guibg=Grey
