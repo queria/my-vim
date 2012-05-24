@@ -10,6 +10,9 @@ map! <F5> gT
 map <F6> gt
 map! <F6> gt
 
+map , gT
+map ; gt
+
 "map <F2> :w\|!./main.py<CR>
 map <F2> :w\|!./main.*<CR>
 
