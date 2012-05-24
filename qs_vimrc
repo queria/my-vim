@@ -64,7 +64,8 @@ set tabstop=4   " kolik mezer zabira <Tab>
 set shiftwidth=4        " kolik mezer tvori jeden krok indentu
 set nosta       " no smarttab - nepouzivat 'shiftwidth' (mezery pro ind noveho radku)
 set softtabstop=0       " kolik mezer misto skutecneho <Tabu> //0->nepouzivat!
-set noet        " no expandtab - nemenit <Tab> v Insert modu na mezery!
+"set noet        " no expandtab - nemenit <Tab> v Insert modu na mezery!
+set expandtab
 
 set virtualedit=block
 
@@ -135,13 +136,10 @@ function GetEncoding(f)
 	"sleep 1
 	let e = system('enca -L czech -Pe "' . a:f . '"')
 	let e = substitute(e, '/.*', '', '')
-	if e =~ 'unknown'
-		return 'ascii'
+	if e =~ 'unknown' || e =~ 'ASCII'
+		return 'utf-8' " handle ascii files as utf-8 (no make fenc empty after utf8 chars are added in file)
 	endif
-	"echo e
-	"sleep 1
 	return e
-	"return 'ASCII'
 endfunc
 
 "let g:ruby_path = '/usr/lib/ruby/site_ruby/1.8,/usr/lib/ruby/site_ruby/1.8/i686-linux,/usr/lib/ruby/site_ruby,/usr/lib/ruby/vendor_ruby/1.8,/usr/lib/ruby/vendor_ruby/1.8/i686-linux,/usr/lib/ruby/vendor_ruby,/usr/lib/ruby/1.8,/usr/lib/ruby/1.8/i686-linux,.,/home/queria/.gem/ruby/1.8/gems/bundler-1.0.21/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/builder-2.1.2/lib,/usr/lib/ruby/gems/1.8/gems/i18n-0.4.2/lib,/usr/lib/ruby/gems/1.8/gems/sqlite3-1.3.3/lib,/usr/lib/ruby/gems/1.8/gems/tzinfo-0.3.29/lib'
@@ -190,6 +188,7 @@ au BufNewFile,BufRead *.rb  set filetype=eruby
 
 set directory=~/.vim/swp/
 set tabpagemax=30
+
 
 "highlight CursorLine term=underline cterm=none ctermbg=4
 
