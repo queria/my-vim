@@ -217,6 +217,7 @@ au BufNewFile,BufRead *.coffee set tabstop=2
 set directory=~/.vim/swp/
 set tabpagemax=30
 
+let g:ctags_args='--c-types=cfgsu --vim-types=f --if0=yes --extra=+q'
 let g:ctags_statusline=1
 let g:ctags_regenerate=1
 let generate_tags=1
