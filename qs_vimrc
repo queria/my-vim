@@ -33,9 +33,19 @@ map gf :tabe <cfile><CR>
 map <F8> gf
 map! <F8> gf
 
+" vyber textu uvnitr apostrofu
+map <F9> vi'
+map! <F9> vi'
+
+" vyber textu uvnitr uvozovek
+map <F10> vi"
+map! <F10> vi"
+
 map <F12> :clo<CR>
 map! <F12> :clo<CR>
 
+" prepinani zobrazeni netisknutelnych znaku
+map \ :set list!<CR>
 
 " OF - quick find file / open buffer
 "nnoremap t :call OF()<CR>
@@ -96,6 +106,15 @@ set nobackup
 
 set mouse=a
 
+" nastaveni jak se ma ktery netisknutelny znak zobrazit
+"  konce radku jako dolar
+"  mezery na konci radku pomlckou
+"  nezalomitelne mezery (viz shift+space v rozlozeni VOK) jako podtrzitka
+set listchars=eol:$,trail:-,nbsp:_
+" nasledujiciho zapne trvale zobrazovani netisknutelnych znaku
+" (ja osobne mam toto vypnuto, viz mapovani klavesy \ [backslash] nahore)
+"set list
+
 if has("vms")
 	set nowritebackup
 else
@@ -142,6 +161,11 @@ function GetEncoding(f)
 	return e
 endfunc
 
+set laststatus=2 " vzdy zobrazovat stavovou radku
+" vzdy zobrazovat nazev souboru v titulku okna(...)
+set titlestring=%F
+set title
+
 "let g:ruby_path = '/usr/lib/ruby/site_ruby/1.8,/usr/lib/ruby/site_ruby/1.8/i686-linux,/usr/lib/ruby/site_ruby,/usr/lib/ruby/vendor_ruby/1.8,/usr/lib/ruby/vendor_ruby/1.8/i686-linux,/usr/lib/ruby/vendor_ruby,/usr/lib/ruby/1.8,/usr/lib/ruby/1.8/i686-linux,.,/home/queria/.gem/ruby/1.8/gems/bundler-1.0.21/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/builder-2.1.2/lib,/usr/lib/ruby/gems/1.8/gems/i18n-0.4.2/lib,/usr/lib/ruby/gems/1.8/gems/sqlite3-1.3.3/lib,/usr/lib/ruby/gems/1.8/gems/tzinfo-0.3.29/lib'
 
 " automaticke prekodovani souboru dle detekce z enca
@@ -182,6 +206,10 @@ au BufNewFile,BufRead *.jsfl	set filetype=javascript
 
 au BufNewFile,BufRead *.rb  set filetype=eruby
 
+au BufNewFile,BufRead *.coffee set expandtab
+au BufNewFile,BufRead *.coffee set shiftwidth=2
+au BufNewFile,BufRead *.coffee set tabstop=2
+
 "au WinLeave * set nocursorline
 "au WinEnter * set cursorline
 "set cursorline nocursorcolumn
@@ -189,6 +217,9 @@ au BufNewFile,BufRead *.rb  set filetype=eruby
 set directory=~/.vim/swp/
 set tabpagemax=30
 
+let g:ctags_statusline=1
+let g:ctags_regenerate=1
+let generate_tags=1
 
 "highlight CursorLine term=underline cterm=none ctermbg=4
 
