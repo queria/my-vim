@@ -33,7 +33,7 @@ highlight Search     ctermfg=Black	ctermbg=Red	cterm=NONE
 highlight Visual					cterm=reverse
 highlight Cursor     ctermfg=Black	ctermbg=Green	cterm=bold
 highlight Special    ctermfg=Brown
-highlight Comment    ctermfg=Grey
+highlight Comment    ctermfg=DarkMagenta cterm=NONE
 highlight StatusLine ctermfg=blue	ctermbg=white
 highlight Statement  ctermfg=Yellow			cterm=NONE
 highlight Type						cterm=NONE
