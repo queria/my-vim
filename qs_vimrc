@@ -185,6 +185,8 @@ au BufNewFile,BufRead *.as	set bomb
 au BufNewFile,BufRead *.as	set foldmethod=indent
 au BufNewFile,BufRead *.as	set foldlevel=2
 au BufNewFile,BufRead *.as	set foldnestmax=3
+au BufNewFile,BufRead *.as	set noexpandtab
+au BufNewFile,BufRead *.as	set ff=dos
 
 au BufNewFile,BufRead *.mxml set filetype=actionscript
 au BufNewFile,BufRead *.mxml set expandtab
@@ -223,4 +225,5 @@ let g:ctags_regenerate=1
 let generate_tags=1
 
 "highlight CursorLine term=underline cterm=none ctermbg=4
+let python_highlight_all = 1
 
