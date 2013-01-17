@@ -212,6 +212,8 @@ au BufNewFile,BufRead *.coffee set expandtab
 au BufNewFile,BufRead *.coffee set shiftwidth=2
 au BufNewFile,BufRead *.coffee set tabstop=2
 
+au BufNewFile,BufRead *.py setlocal nosi
+
 "au WinLeave * set nocursorline
 "au WinEnter * set cursorline
 "set cursorline nocursorcolumn
