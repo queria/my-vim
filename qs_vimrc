@@ -3,6 +3,11 @@ call pathogen#infect()
 
 " map ,mz :write !mzscheme	" pro scheme - spise zbytecne
 "map <F2> a<C-R>=strftime("%c")<CR><Esc>		" na F2 vlozi aktualni datum/cas
+
+" Synastics - show list of syntax errors
+map <F3> :Errors<CR><c-w>j
+map! <F3> :Errors<CR><c-w>j
+
 " previous tab
 map <F5> gT
 map! <F5> gT
@@ -165,6 +170,19 @@ set laststatus=2 " vzdy zobrazovat stavovou radku
 " vzdy zobrazovat nazev souboru v titulku okna(...)
 set titlestring=%F
 set title
+
+" configure syntastic auto-syntax-checking
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open=1
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_highlighting = 1
+let g:syntastic_auto_jump=0
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': [] }
 
 "let g:ruby_path = '/usr/lib/ruby/site_ruby/1.8,/usr/lib/ruby/site_ruby/1.8/i686-linux,/usr/lib/ruby/site_ruby,/usr/lib/ruby/vendor_ruby/1.8,/usr/lib/ruby/vendor_ruby/1.8/i686-linux,/usr/lib/ruby/vendor_ruby,/usr/lib/ruby/1.8,/usr/lib/ruby/1.8/i686-linux,.,/home/queria/.gem/ruby/1.8/gems/bundler-1.0.21/lib,/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.11/lib,/usr/lib/ruby/gems/1.8/gems/builder-2.1.2/lib,/usr/lib/ruby/gems/1.8/gems/i18n-0.4.2/lib,/usr/lib/ruby/gems/1.8/gems/sqlite3-1.3.3/lib,/usr/lib/ruby/gems/1.8/gems/tzinfo-0.3.29/lib'
 
