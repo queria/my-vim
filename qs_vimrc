@@ -16,13 +16,11 @@ map! <F3> :Errors<CR><c-w>j
 map <F4> :Gstatus<CR>
 map! <F4> :Gstatus<CR>
 
+nmap <F5> :TagbarToggle<CR><c-w>l
+
 " previous tab
-map <F5> gT
-map! <F5> gT
 map , gT
 " next tab
-map <F6> gt
-map! <F6> gt
 map ; gt
 
 " open file-path under cursor in new tab
