@@ -111,6 +111,7 @@ set scrolloff=16 " skroluj radky nad/pod kurzorem navic
 set sidescrolloff=18     " skroluj sloupce pred/za kurzorem navic
 set number      " cisla radku
 " set numberwidth=3       " kolik sloupcu na cisla radku
+set colorcolumn=81,82,83,84,85,86,87,88,89,90
 
 set nosb        " splitovane okno dole, nove nahore
 set showmode    " zobrazovat 'mod' ve stavovem radku
