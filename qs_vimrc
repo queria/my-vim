@@ -1,4 +1,8 @@
 
+set nocompatible
+if isdirectory('/etc/vim')
+    set runtimepath+=/etc/vim
+endif
 call pathogen#infect()
 
 " map ,mz :write !mzscheme	" pro scheme - spise zbytecne
@@ -48,7 +52,6 @@ map \ :set list!<CR>
 "nnoremap t :call OF()<CR>
 "nmap <leader>rci :%!ruby-code-indenter<cr>
 
-set nocompatible
 set ttyfast
 
 set noeb		" zadny error-bell ani visual-bell  ->> blee :)
