@@ -250,7 +250,9 @@ au BufNewFile,BufRead *.sls set tabstop=2
 "au WinEnter * set cursorline
 "set cursorline nocursorcolumn
 
-set directory=~/.vim/swp/
+if isdirectory('~/.vim/swp')
+    set directory=~/.vim/swp/
+endif
 set tabpagemax=30
 
 let g:ctags_args='--c-types=cfgsu --vim-types=f --if0=yes --extra=+q'
