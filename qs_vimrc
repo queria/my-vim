@@ -191,6 +191,11 @@ set laststatus=2 " vzdy zobrazovat stavovou radku
 set titlestring=%F
 set title
 
+command Modeline :normal ggO# vim: set et sw=4 ts=4:<ESC>
+command ModelineYaml :normal ggO# vim: set et sw=4 ts=4 ft=yaml:<ESC>
+command ModelinePy :normal ggO# vim: set et sw=4 ts=4 ft=python:<ESC>
+command ModelinePhp :normal ggO// vim: set noet sw=4 ts=4 ft=php:<ESC>
+
 " configure syntastic auto-syntax-checking
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
