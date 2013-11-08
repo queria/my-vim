@@ -35,7 +35,13 @@ map! <F3> :w\|:Errors<CR><c-w>j
 map <F4> :Gstatus<CR>
 map! <F4> :Gstatus<CR>
 
-nmap <F5> :TagbarToggle<CR><c-w>l
+"nmap <F5> :TagbarToggle<CR><c-w>l
+
+" ReST style heading underlining
+map <F5> YpVr=
+map <F6> YpVr*
+map <F7> YpVr-
+"map <F4> YpVr-<CR>
 
 " previous tab
 map , gT
@@ -59,6 +65,7 @@ map! <F10> vi"
 
 map <F12> :clo<CR>
 map! <F12> :clo<CR>
+
 
 " prepinani zobrazeni netisknutelnych znaku
 map \ :set list!<CR>
