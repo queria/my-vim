@@ -28,8 +28,8 @@ endfunc
 map <F2> :w\|call RunMyApp()<CR>
 
 " Synastics - show list of syntax errors
-map <F3> :Errors<CR><c-w>j
-map! <F3> :Errors<CR><c-w>j
+map <F3> :w\|:Errors<CR><c-w>j
+map! <F3> :w\|:Errors<CR><c-w>j
 
 " Show git-status
 map <F4> :Gstatus<CR>
