@@ -5,6 +5,10 @@
 " Maintainer: Pavel Sedlák <psedlak@redhat.com>
 " Version: 0.1
 
+if exists("g:disable_gitstate_plugin")
+    finish
+endif
+   
 if exists("b:did_gitstate_plugin")
     finish " only load once
 else

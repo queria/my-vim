@@ -1,4 +1,6 @@
 
+let g:disable_gitstate_plugin = 1
+
 set nocompatible
 if isdirectory('/etc/vim')
     set runtimepath+=/etc/vim
