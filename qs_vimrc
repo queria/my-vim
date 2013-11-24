@@ -1,5 +1,6 @@
 
-let g:disable_gitstate_plugin = 1
+"let g:disable_gitstate_plugin = 1
+let g:loaded_gitgutter = 1
 
 set nocompatible
 if isdirectory('/etc/vim')
