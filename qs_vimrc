@@ -290,4 +290,8 @@ let generate_tags=1
 
 "highlight CursorLine term=underline cterm=none ctermbg=4
 let python_highlight_all = 1
-
+if has("gui_running")
+    set paste
+    set lines=46 columns=150
+    set guioptions-=T
+endif
