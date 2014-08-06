@@ -41,7 +41,7 @@ highlight StatusLineNC cterm=NONE       ctermfg=White   ctermbg=Black
 highlight Statement  cterm=NONE         ctermfg=Yellow
 highlight Type       cterm=NONE
 
-highlight Search     ctermfg=Black      ctermbg=Yellow  cterm=none
+highlight Search     ctermfg=Black      ctermbg=DarkYellow  cterm=none
 highlight IncSearch  ctermfg=Black      ctermbg=Yellow  cterm=none
 "highlight 
 highlight CursorLine ctermfg=NONE       ctermbg=NONE    cterm=underline
