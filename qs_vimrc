@@ -21,6 +21,8 @@ function RunMyApp()
         execute "!./main.py"
     elseif filereadable('./main.sh')
         execute "!./main.sh"
+    elseif filereadable('./main.go')
+        execute "!go run ./main.go"
     else
         execute "!./main.*"
     endif
