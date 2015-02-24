@@ -180,6 +180,8 @@ if has("autocmd")
 	augroup END
 endif " has("autocmd")
 
+set spellfile=~/.vim/my-world-list.utf8.add
+
 " pozaduje nainstalovanou enca
 function GetEncoding(f)
 	"system('enca -L czech -Pe "' . a:f . '" > /tmp/et')
