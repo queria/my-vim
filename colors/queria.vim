@@ -28,6 +28,7 @@ highlight StatusLineNC gui=NONE     guifg=Black guibg=White
 highlight Statement  guifg=#ffff54              gui=NONE
 highlight Type                                  gui=NONE
 highlight PMenuSel   guifg=Black    guibg=Yellow
+highlight ExtraWhitespace guifg=White guibg=Red
 
 " Console
 highlight Normal                        ctermfg=LightGrey
@@ -59,6 +60,7 @@ highlight DiffDelete cterm=NONE         ctermfg=White   ctermbg=DarkRed
 "ctermfg=Black   ctermbg=White
 
 highlight ColorColumn cterm=bold ctermbg=none ctermfg=none
+highlight ExtraWhitespace ctermfg=White ctermbg=Red
 
 " only for vim 5
 if has("unix")

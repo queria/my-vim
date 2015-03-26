@@ -312,6 +312,9 @@ let g:ctags_statusline=1
 let g:ctags_regenerate=1
 let generate_tags=1
 
+" highlight trailing or mixed (tab-space) whitespaces
+match ExtraWhitespace /\s\+$\| \+\zs\t\+\|\t\+\zs \+/
+
 "highlight CursorLine term=underline cterm=none ctermbg=4
 let python_highlight_all = 1
 if has("gui_running")
