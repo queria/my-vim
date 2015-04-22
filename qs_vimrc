@@ -314,6 +314,7 @@ let generate_tags=1
 
 " highlight trailing or mixed (tab-space) whitespaces
 match ExtraWhitespace /\s\+$\| \+\zs\t\+\|\t\+\zs \+/
+au BufNewFile,BufRead *.yml,*.yaml 2match ExtraWhitespace /: {/
 
 "highlight CursorLine term=underline cterm=none ctermbg=4
 let python_highlight_all = 1
