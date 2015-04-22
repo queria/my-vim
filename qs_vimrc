@@ -226,12 +226,12 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_disable_auto_complete = 0
 let g:neocomplcache_min_syntax_length = 3
-if !exists('g:neocomplcache_omni_functions')
-    let g:neocomplcache_omni_functions = {}
-    let g:neocomplcache_omni_functions['python'] = 'jedi#completions'
-endif
-let g:neocomplcache_force_omni_patterns = {}
-let g:neocomplcache_force_omni_patterns.python = '[a-z0-9\._]'
+"" if !exists('g:neocomplcache_omni_functions')
+""     let g:neocomplcache_omni_functions = {}
+""     let g:neocomplcache_omni_functions['python'] = 'jedi#completions'
+"" endif
+"" let g:neocomplcache_force_omni_patterns = {}
+"" let g:neocomplcache_force_omni_patterns.python = '[a-z0-9\._]'
 " '[^. \t]\.\w*'
 " configure jedi-vim python code completion
 let g:jedi#use_tabs_not_buffers=0
