@@ -1,4 +1,8 @@
 
+if &shell =~# 'fish$'
+    set shell=bash
+endif
+
 "let g:disable_gitstate_plugin = 1
 let g:loaded_gitgutter = 1
 
@@ -35,8 +39,8 @@ map <F3> :w\|:Errors<CR><c-w>j
 map! <F3> :w\|:Errors<CR><c-w>j
 
 " Show git-status
-map <F4> :Gstatus<CR>
-map! <F4> :Gstatus<CR>
+map <F4> :colorscheme morning<CR>
+map! <F4> :colorscheme morning<CR>
 
 "nmap <F5> :TagbarToggle<CR><c-w>l
 
