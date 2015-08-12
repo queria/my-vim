@@ -257,6 +257,8 @@ au BufReadPre * exec "set fencs=".GetEncoding(expand(expand("<afile>:p")))
 
 set showtabline=2 " zobrazovat radek se zalozkami (taby) porad (:help 'showtabline')
 
+au BufEnter * :syntax sync fromstart
+
 " ActionScript association
 au BufNewFile,BufRead *.as	set filetype=actionscript
 au BufNewFile,BufRead *.as	set fenc=utf-8
