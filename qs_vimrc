@@ -296,8 +296,8 @@ au BufNewFile,BufRead *.coffee set tabstop=2
 au BufNewFile,BufRead *.py setlocal nosi
 
 au BufNewFile,BufRead *.yml,*.yaml set expandtab
-au BufNewFile,BufRead *.yml,*.yaml set shiftwidth=2
-au BufNewFile,BufRead *.yml,*.yaml set tabstop=2
+au BufNewFile,BufRead *.yml,*.yaml set shiftwidth=4
+au BufNewFile,BufRead *.yml,*.yaml set tabstop=4
 au BufNewFile,BufRead *.yml,*.yaml set noai
 
 au BufNewFile,BufRead *.sls set filetype=yaml
