@@ -303,6 +303,8 @@ au BufNewFile,BufRead *.coffee set shiftwidth=2
 au BufNewFile,BufRead *.coffee set tabstop=2
 
 au BufNewFile,BufRead *.py setlocal nosi
+au BufNewFile,BufRead *.py.j2 set filetype=python
+au BufNewFile,BufRead *.py.j2 setlocal nosi
 
 au BufNewFile,BufRead *.yml,*.yaml set expandtab
 au BufNewFile,BufRead *.yml,*.yaml set shiftwidth=4
