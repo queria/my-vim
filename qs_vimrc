@@ -47,7 +47,7 @@ map <F2> call ToggleVerbose()<CR>
 map <F3> :w\|:Errors<CR><c-w>j
 map! <F3> :w\|:Errors<CR><c-w>j
 
-" Show git-status
+" Swap to white-bg-friendly colors
 map <F4> :colorscheme morning<CR>
 map! <F4> :colorscheme morning<CR>
 
@@ -142,6 +142,7 @@ set number      " cisla radku
 if exists('+colorcolumn')
     set colorcolumn=81,82,83,84,85,86,87,88,89,90
 endif
+set synmaxcol=800
 
 set nosb        " splitovane okno dole, nove nahore
 set showmode    " zobrazovat 'mod' ve stavovem radku
