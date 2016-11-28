@@ -112,6 +112,7 @@ colorscheme queria
 set backspace=indent,eol,start
 set tabstop=4   " kolik mezer zabira <Tab>
 set shiftwidth=4        " kolik mezer tvori jeden krok indentu
+set shiftround " round the size of indent to multiple of shiftwidth's
 set nosta       " no smarttab - nepouzivat 'shiftwidth' (mezery pro ind noveho radku)
 set softtabstop=0       " kolik mezer misto skutecneho <Tabu> //0->nepouzivat!
 "set noet        " no expandtab - nemenit <Tab> v Insert modu na mezery!
