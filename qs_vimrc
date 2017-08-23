@@ -322,6 +322,11 @@ au BufNewFile,BufRead *.sls set expandtab
 au BufNewFile,BufRead *.sls set shiftwidth=2
 au BufNewFile,BufRead *.sls set tabstop=2
 
+au BufNewFile,BufRead *.groovy.inc set filetype=groovy
+au BufNewFile,BufRead *.groovy.inc set expandtab
+
+au FileType gitcommit setlocal spell
+
 "au WinLeave * set nocursorline
 "au WinEnter * set cursorline
 "set cursorline nocursorcolumn
