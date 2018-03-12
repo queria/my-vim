@@ -340,6 +340,10 @@ au BufNewFile,BufRead *.sls set expandtab
 au BufNewFile,BufRead *.sls set shiftwidth=2
 au BufNewFile,BufRead *.sls set tabstop=2
 
+au BufNewFile,BufRead *.groovy set filetype=groovy
+au BufNewFile,BufRead *.groovy set sw=2
+au BufNewFile,BufRead *.groovy set ts=2
+au BufNewFile,BufRead *.groovy set et
 au BufNewFile,BufRead *.groovy.inc set filetype=groovy
 au BufNewFile,BufRead *.groovy.inc set expandtab
 
