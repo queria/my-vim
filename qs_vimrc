@@ -36,12 +36,26 @@ function! ToggleVerbose()
     if !&verbose
         set verbosefile=~/.vim/log
         set verbose=15
+        echomsg "Verbose logging enabled"
     else
         set verbose=0
         set verbosefile=
+        redraw
+        echomsg "Verbose logging disabled"
     endif
 endfunction
-map <F2> call ToggleVerbose()<CR>
+
+function! QuTogglePaste()
+	if !&paste
+		set paste
+		echomsg "Paste mode ON"
+	else
+		set nopaste
+		echomsg "Paste mode OFF"
+	endif
+endfunction
+map <F2> :call QuTogglePaste()<CR>
+map! <F2> :call QuTogglePaste()<CR>
 
 " Syntastic - show list of syntax errors
 map <F3> :w\|:Errors<CR><c-w>j
@@ -72,12 +86,16 @@ map <F8> gf
 map! <F8> gf
 
 " vyber textu uvnitr apostrofu
-map <F9> vi'
-map! <F9> vi'
+"map <F9> vi'
+"map! <F9> vi'
 
 " vyber textu uvnitr uvozovek
-map <F10> vi"
-map! <F10> vi"
+"map <F10> vi"
+"map! <F10> vi"
+
+" switch between verbose logging
+map <F10> :call ToggleVerbose()<CR>
+map! <F10> :call ToggleVerbose()<CR>
 
 map <F12> :clo<CR>
 map! <F12> :clo<CR>
